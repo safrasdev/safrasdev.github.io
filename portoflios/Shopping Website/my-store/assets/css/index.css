@@ -1,0 +1,605 @@
+/* index.css - Specific Styles for Home Page */
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 60%, #000 100%);
+}
+
+#watch-container {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    perspective: 2000px;
+    z-index: 2;
+}
+
+.watch-case {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at 30% 30%, #3a3a3a 0%, #111 80%, #000 100%);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 
+        0 20px 50px rgba(0,0,0,0.8),
+        inset 0 0 15px rgba(255,255,255,0.05);
+    border: 4px solid #222;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.watch-face {
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.9);
+}
+
+.watch-face::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.markers {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%; height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.markers::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; width: 2px; height: 100%;
+    background: linear-gradient(to bottom, #444 0, #444 8px, transparent 8px, transparent calc(100% - 8px), #444 calc(100% - 8px));
+    transform: translateX(-50%);
+}
+
+.markers::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; width: 100%; height: 2px;
+    background: linear-gradient(to right, #444 0, #444 8px, transparent 8px, transparent calc(100% - 8px), #444 calc(100% - 8px));
+    transform: translateY(-50%);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    z-index: 5;
+    will-change: transform;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 70px;
+    background: #fff;
+    margin-left: -3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.min-hand {
+    width: 4px;
+    height: 110px;
+    background: #ccc;
+    margin-left: -2px;
+}
+
+.sec-hand {
+    width: 2px;
+    height: 130px;
+    background: #d4a017; /* Luxury Gold */
+    margin-left: -1px;
+    z-index: 8;
+}
+
+.watch-knob {
+    position: absolute;
+    top: 50%; left: 100%;
+    width: 15px; height: 20px;
+    background: #222;
+    margin-top: -10px;
+    border-radius: 2px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    z-index: 2;
+    /* Bring above overlay */
+}
+
+.hero-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.hero-nav-links a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #fff;
+    position: relative;
+    padding-right: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-nav-links a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+.hero-nav-links a:hover {
+    padding-right: 40px;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 0.15;
+    filter: grayscale(1);
+}
+
+/* Darker overlay for text visibility */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.85;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 450px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+/* Invert buttons for hero section */
+.hero-section .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.hero-section .btn::before {
+    background: #000;
+}
+
+.hero-section .btn:hover {
+    color: #fff;
+}
+
+.hero-section .btn-outline {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.hero-section .btn-outline::before {
+    background: #fff;
+}
+
+.hero-section .btn-outline:hover {
+    color: #000;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #fff;
+    z-index: 2;
+}
+
+.scroll-indicator .line {
+    width: 60px;
+    height: 1px;
+    background: #fff;
+}
+
+/* CTA Parallax Section */
+.cta-parallax {
+    position: relative;
+    padding: 200px 0;
+    overflow: hidden;
+    color: #fff;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.parallax-bg-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* For parallax movement */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* This creates the parallax effect */
+    z-index: -1;
+}
+
+/* Overlay for CTA text */
+.cta-parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.cta-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.cta-main h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.cta-main p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.cta-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.stat-item {
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-num {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    .cta-parallax {
+        padding: 100px 0;
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .cta-main h2 {
+        font-size: 3rem;
+    }
+
+    .cta-stats {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Full-Screen Contact Section Overhaul */
+.contact-section {
+    display: flex;
+    min-height: 90vh;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.contact-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    position: relative;
+    background: #fff;
+    /* All White background */
+}
+
+.contact-left-panel {
+    border-right: 1px solid #f2f2f2;
+    /* Subtle separation */
+    color: #000;
+}
+
+.contact-right-panel {
+    color: #000;
+}
+
+.panel-inner {
+    width: 100%;
+    max-width: 700px;
+    /* Expansive content */
+}
+
+/* Watermark moved to black-on-white */
+.shadow-watermark::before {
+    content: 'VOGUE';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 20rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.02);
+    /* Low contrast watermark */
+    z-index: 0;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+}
+
+.contact-header h2 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: -0.03em;
+}
+
+.contact-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    max-width: 500px;
+}
+
+/* Horizontal Info Grids to fill space */
+.contact-info-grid,
+.extra-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.extra-info-grid {
+    border-bottom: none;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #aaa;
+}
+
+.detail-value,
+.hours {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.mini-socials-full {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.mini-socials-full a {
+    color: #888;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mini-socials-full a:hover {
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.contact-quote-full {
+    margin-top: 60px;
+}
+
+.contact-quote-full p {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact-quote-full span {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #ddd;
+}
+
+/* Wide Form Styles */
+.vogue-form-full {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.input-wrapper-full {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.input-wrapper-full label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #aaa;
+    transition: all 0.4s ease;
+}
+
+.input-wrapper-full input,
+.input-wrapper-full textarea {
+    background: transparent;
+    border: none;
+    padding: 15px 0;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #000;
+    outline: none;
+    width: 100%;
+    resize: none;
+    /* Make it static */
+    overflow-y: auto;
+    /* Show scrollbar if out of height */
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #efefef;
+    transition: all 0.4s ease;
+}
+
+/* Fix Focus Animations for both Input and Textarea */
+.input-wrapper-full input:focus+label,
+.input-wrapper-full textarea:focus+label {
+    color: #000;
+    letter-spacing: 0.3em;
+}
+
+.input-wrapper-full input:focus~.input-line,
+.input-wrapper-full textarea:focus~.input-line {
+    background: #000;
+    height: 2px;
+}
+
+.submit-btn-full {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* FULL WIDTH BUTTON */
+    background: #000;
+    color: #fff;
+    padding: 25px 40px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn-full svg {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.submit-btn-full:hover {
+    background: #222;
+}
+
+.submit-btn-full:hover svg {
+    transform: translateX(15px);
+}
+
+@media (max-width: 1024px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-panel {
+        padding: 80px 40px;
+        border-right: none;
+        border-bottom: 1px solid #f2f2f2;
+    }
+}

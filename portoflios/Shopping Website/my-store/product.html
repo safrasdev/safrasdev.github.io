@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | VOGUEMAN</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+<body>
+    <site-header></site-header>
+
+    <main>
+        <div class="product-detail-container">
+            <div class="container">
+                <div class="product-detail-grid">
+                    <!-- Images -->
+                    <div class="product-gallery">
+                        <div class="main-image fade-in">
+                            <img id="main-prod-img" src="https://images.unsplash.com/photo-1617135670824-2bb785361021?auto=format&fit=crop&q=80&w=1000" alt="Product">
+                        </div>
+                        <div class="thumbnails fade-in">
+                            <img src="https://images.unsplash.com/photo-1617135670824-2bb785361021?auto=format&fit=crop&q=80&w=200" alt="thumb1" class="active" onclick="changeImage(this.src)">
+                            <img src="https://images.unsplash.com/photo-1551028150-64b9f398f678?auto=format&fit=crop&q=80&w=200" alt="thumb2" onclick="changeImage(this.src)">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=200" alt="thumb3" onclick="changeImage(this.src)">
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="product-specs">
+                        <div class="specs-inner">
+                            <span class="product-meta fade-in">ESSENTIAL COLLEZIONE / 2024</span>
+                            <h1 id="prod-name" class="reveal-text"><span>CLASSIC OXFORD</span> <span>LEATHER</span></h1>
+                            <p id="prod-price" class="price fade-in">$249.00</p>
+
+                            <div class="product-description fade-in">
+                                <p>Masterfully crafted from premium full-grain Italian leather. Every pair undergoes a meticulous finishing process to achieve the perfect balance of comfort and structural integrity. A 0-radius approach to high fashion.</p>
+                            </div>
+
+                            <div class="product-options fade-in">
+                                <div class="option-group">
+                                    <label>SELECT SIZE</label>
+                                    <div class="size-chips">
+                                        <button class="active">40</button>
+                                        <button>41</button>
+                                        <button>42</button>
+                                        <button>43</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="purchase-actions fade-in">
+                                <button class="btn btn-add-cart" id="add-to-cart-btn">ADD TO BAG</button>
+                                <button class="btn btn-outline btn-wishlist">WISHLIST</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gsap-animations.js"></script>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>

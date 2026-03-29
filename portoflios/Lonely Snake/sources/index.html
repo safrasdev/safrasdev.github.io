@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Lonely Snake</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="score-bar">
+            <p class="score1">Score: <span class="score">0</span></p>
+            <p class="score2"> High Score: <span class="high-score">0</span></p>
+        </div>
+        <div class="play-ground">
+            <div class="snake"></div>
+            <div class="food"></div>
+        </div>
+        <div class="controllers">
+            <i class='bxr  bx-arrow-left-stroke' data-direction="ArrowLeft"></i> 
+            <i class='bxr  bx-arrow-up-stroke' data-direction="ArrowUp"></i> 
+            <i class='bxr  bx-arrow-right-stroke' data-direction="ArrowRight"></i> 
+            <i class='bxr  bx-arrow-down-stroke' data-direction="ArrowDown"></i> 
+        </div>
+        <div class="reply-box">
+            <h3>Game Over...</h3>
+            <p>You'r score is: <span class="score-display">0</span></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

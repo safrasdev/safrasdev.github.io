@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafrasDev</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@400;700;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          screens: {
+            'xs': '450px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+          },
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#00deec",
+              "inverse-surface": "#fcf8f8",
+              "on-surface-variant": "#adaaaa",
+              "surface-container": "#1a1919",
+              "error-container": "#9f0519",
+              "inverse-primary": "#006a71",
+              "on-secondary": "#47001d",
+              "tertiary-container": "#7000ff",
+              "error": "#ff716c",
+              "on-secondary-fixed-variant": "#a1004b",
+              "outline": "#777575",
+              "error-dim": "#d7383b",
+              "secondary-fixed-dim": "#ffadc0",
+              "surface-bright": "#2c2c2c",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-fixed": "#ffc1ce",
+              "surface-container-highest": "#262626",
+              "tertiary-fixed": "#bda1ff",
+              "primary-fixed": "#00eefc",
+              "surface-tint": "#8ff5ff",
+              "secondary-dim": "#e4006c",
+              "primary-dim": "#00deec",
+              "surface-container-lowest": "#000000",
+              "surface-container-high": "#201f1f",
+              "surface-container-low": "#131313",
+              "primary-container": "#00eefc",
+              "on-tertiary-fixed": "#1f0052",
+              "inverse-on-surface": "#565554",
+              "tertiary-fixed-dim": "#b190ff",
+              "secondary": "#ff6b98",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "surface-variant": "#262626",
+              "on-secondary-fixed": "#6d0030",
+              "tertiary-dim": "#874cff",
+              "on-primary-container": "#005359",
+              "on-tertiary": "#290067",
+              "on-secondary-container": "#fff5f6",
+              "primary": "#8ff5ff",
+              "surface-dim": "#0e0e0e",
+              "on-primary-fixed": "#003f43",
+              "on-error": "#490006",
+              "on-background": "#ffffff",
+              "on-tertiary-container": "#f8f1ff",
+              "secondary-container": "#bb0058",
+              "on-error-container": "#ffa8a3",
+              "outline-variant": "#494847",
+              "surface": "#0e0e0e",
+              "on-primary": "#005d63",
+              "on-surface": "#ffffff",
+              "background": "#0e0e0e",
+              "tertiary": "#ac89ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Inter"],
+              "montserrat": ["Montserrat", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+      }
+      .glass-card {
+        background: rgba(38, 38, 38, 0.4);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px)
+      }
+      .noise-bg {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA0MAMDRvxG296ONEiny3IFrHepEjyuH-5-KzXGUgPeZ3WYthizD3Zh4UCwAZjjJJ2v61F1dx4QNJFrpuLeD1pvX7r5T6v3ab2NEhjsffEIEdsuPSNThLF_-8TFEgVdrqa3-6wXwFmGpY2daXDPbNooq1oNbpnNy0wwlHEUUZA_AyxYqYn8BNvDVZ8hcylA3AA-xHR9tJ5-PwUWib8tpLwCU2wOanq4DieEezPXZHDSznHCPEBx2cTW5mQQAogSLCuxWLlZJ0_JYPKo);
+        filter: contrast(150%) brightness(1000%);
+        opacity: 0.03
+      }
+      .fluid-gradient {
+        background: radial-gradient(circle at 50% 50%, #1a1919 0%, #0e0e0e 100%);
+        position: relative
+      }
+      .fluid-gradient::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(143, 245, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(172, 137, 255, 0.05) 0%, transparent 40%);
+        z-index: -1
+      }
+      .magnetic-pull {
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1)
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+Name:
+MOHAMMED SAFRAS
+
+PROFESSION:
+WEB DEVELOPER,
+GRAPHIC DESGINER
+
+ABOUT ME:
+Hi, my name is Safras, and I’m from Sri Lanka. I’m a Full-Stack Developer and Graphic Designer, 
+passionate about transforming ideas into immersive digital experiences. I started learning coding 
+back in grade 7, and since then, I’ve been fascinated by how lines of code and design can come 
+together to create something meaningful. I love crafting websites that are not only functional 
+but visually striking, blending creativity with technical precision. Currently, I’m building and 
+designing websites that I share with the world on Gumroad, turning my projects into something 
+people can use and enjoy. Every line of code, every design element, tells a story — and I thrive 
+on bringing those stories to life. For me, building projects is more than work; it’s a journey of 
+innovation, creativity, and expression, where every pixel and interaction has a purpose.
+
+SKILLS:
+    DESIGN SKILLS:
+    UI/UX Designing - 91%
+    FIGMA - 92%
+    CANVA - 71%
+    PHOTOSHOP - 75%
+    ILLUSTRATION - 72%
+    LAYOUR & GRID DESIGN - 85%
+    BRANDING - 86%
+
+    WEB DEVELOPMENT SKILLS:
+    HTML - 97%
+    CSS - 95%
+    JAVASCRIPT - 92%
+    REACT - 52%
+    PHP - 86%
+    PYTHON - 63%
+    RESPONSIVE - 95%
+    SEO - 64%
+    GIT - 52%
+    WORDPRESS - 63%
+
+WHAT IM CURRENTLY DOIGN:
+    LEARNING:
+    Currently, I’m in the lab leveling up my technical stack and building the future. I’m deep-diving into
+    Python and React to bridge the gap between powerful back-end logic and high-vibe user interfaces.
+
+    Freelancing:
+    I currently do freelance design and development services to sharpen my skills and gain real-world experience. 
+    I create modern, responsive, and high-quality websites at affordable prices for clients who want something 
+    unique and professional.
+
+    Selling Digital Products:
+    I’m also selling digital products like web design templates and fully coded websites on my Gumroad store called Webinfiny. 
+    It’s where I share my creative projects and help others get high-quality designs and ready-to-use website templates at 
+    affordable prices.
+
+

@@ -1,0 +1,130 @@
+/* Minimalist Checkout Styles */
+.checkout-page-container {
+    padding-top: 180px;
+    padding-bottom: 120px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdfdfd;
+}
+
+.checkout-minimal-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-summary-card {
+    background: #000;
+    color: #fff;
+    padding: 60px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.summary-header {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.summary-header span {
+    color: #fff;
+}
+
+.summary-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    color: rgba(255,255,255,0.7);
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+.summary-calculations {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
+    margin-bottom: 60px;
+}
+
+.sum-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.sum-line.total {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.btn-checkout-final {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 25px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 30px;
+}
+
+.btn-checkout-final:hover {
+    background: #eee;
+    transform: scale(0.98);
+}
+
+.privacy-note {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+
+#success-view {
+    text-align: center;
+    padding: 40px;
+}
+
+#success-view h2 {
+    font-size: 4rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 20px;
+}
+
+#success-view p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+.btn-back-home {
+    background: #000;
+    color: #fff;
+    padding: 20px 40px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 768px) {
+    .order-summary-card {
+        padding: 40px 25px;
+    }
+    .sum-line.total {
+        font-size: 1.4rem;
+    }
+}

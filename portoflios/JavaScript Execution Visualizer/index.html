@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Engine</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="start_screen">
+        <h1 class="intro_text"><span>JavaScript</span> Engine</h1>
+        <p class="credit_text">By Safras</p>
+        <div class="code_container">
+            <p>
+                console.log("Start");<br><br>
+                setTimeout(() => {<br>
+                    console.log("AsyncTask")<br>
+                }, 10000);<br><br>
+                console.log("End");
+            </p>
+        </div>
+        <div class="start_btn ">
+            <p>Run The Code</p>
+        </div>
+    </section>
+
+    <section class="animation_screen fadein">
+        <div class="animation_area">
+            <div class="call_stack">
+                <p class="title">CALL STACK</p>
+                <div class="tasks_container">
+                    <div class="task1 task">
+                        <p>Console Log "Start"</p>
+                        <div class="overlay o1"></div>
+                    </div>
+                    <div class="task2 task">
+                        <p>Console Log "AsyncTask" After 15 Seconds</p>
+                        <div class="overlay o2"></div>
+                    </div>
+                    <div class="task3 task">
+                        <p>Console Log "End"</p>
+                        <div class="overlay o3"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/Arrow 1.png" class="arrow1">
+            <img src="assets/Arrow 2.png" class="arrow2">
+            <img src="assets/Arrow 3.png" class="arrow3">
+            <img src="assets/transfer.png" class="transfer_arrow">
+            <h1 class="loop_text">EVENT <br> LOOP</h1>
+            <div class="task_queues">
+                <p class="title">CALLBACK QUEUE</p>
+                <div class="tasks_container"></div>
+            </div>
+            <div class="web_api">
+                <p class="title">WEB APIs</p>
+                <div class="tasks_container">
+                    <div class="timer_bar">
+                        <div class="timer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_panel">
+            <div class="output_wrapper">
+                <p>OUTPUT</p>
+                <div class="output_container">
+                </div>
+            </div>
+            <div class="description_area"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

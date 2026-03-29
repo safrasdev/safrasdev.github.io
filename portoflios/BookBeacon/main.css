@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chelsea Market'; 
+    src: url('fonts/ChelseaMarket-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d2d2d2;
+}
+
+nav {
+    background-color: #616060;
+    height: fit-content;
+    padding-bottom: 15px;
+}
+
+nav .webname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: "Chelsea Market", sans-serif;
+    transform: translateY(6px);
+}
+
+nav .webname span {
+    font-family: "Chelsea Market", sans-serif;
+    margin-right: 10px;
+    color: #e44e4e;
+}
+
+#popup {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: #d23353;
+    width: 500px;
+    height: fit-content;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 20px 20px 15px;
+}
+
+.popup p {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.popup .addinputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.popup .addinputs .addtitle,
+.popup .addinputs .addauthor,
+.popup .addinputs .adddescription .descriptionarea {
+    float: left;
+    position: relative;
+}
+
+.popup .addinputs input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    padding: 0 20px 0 5px;
+    font-size: 18px;
+}
+
+.addinputs input::placeholder {
+    color: #471a1a;
+}
+
+.addinputs .addtitle .titleinput,
+.addinputs .addauthor .authorinput {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 2px solid #000000;
+}
+
+.addinputs .addtitle .titleinput ~ .focus-border,
+.addinputs .addauthor .authorinput ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: 0.4s;
+}
+
+.addinputs .addtitle .titleinput:focus ~ .focus-border,
+.addinputs .addauthor .authorinput:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.addinputs .adddescription .descriptionarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 160px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+    overflow: auto;
+    background-color: transparent;
+    transition: border 0.3s;
+    margin-bottom: 20px;
+}
+
+.addinputs .adddescription .descriptionarea:focus {
+    border: 2px solid #fff;
+}
+
+.addinputs .adddescription .descriptionarea::placeholder {
+    color: #471a1a;
+}
+
+.popup .addbtns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse; 
+}
+
+.popup .addbtns .btns {
+    gap: 10px;
+}
+
+.popup .addbtns .error-msg {
+    display: none;
+    font-size: 16px;
+    transform: translateY(6px);
+    color: #5e0000;
+    animation: vibrate 0.3s ease-out; 
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateY(6px) translateX(0); 
+    }
+    20% {
+        transform: translateY(6px) translateX(-3px);
+    }
+    40% {
+        transform: translateY(6px) translateX(3px);
+    }
+    60% {
+        transform: translateY(6px) translateX(-3px)
+    }
+    80% {
+        transform: translateY(6px) translateX(3px);
+    }
+    100% {
+        transform: translateY(6px) translateX(0);
+    }
+}
+
+.popup .addbtns button {
+    width: 70px;
+    height: 36px;
+    border: none;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.popup .addbtns button:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+}
+
+#notes {
+    position: relative;
+}
+
+.books {
+    margin: 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.books .container {
+    background-color: #000;
+    width: 500px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.books .container .heading {
+    color: #d23353;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.books .container .author {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.books .container .content {
+    color: #fff;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.books .container .delete {
+    background-color: #d23353;
+    border: none;
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.books .container .delete:hover {
+    background: #e9002f;
+}
+
+.addbtn {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: #d23353;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    margin: 10px 0 0 1281px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.addbtn p {
+    font-size: 28px;
+    transition: opacity 0.2s ease; 
+}
+
+.addbtn span {
+    position: absolute;
+    color: #d23353;
+    font-size: 26px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.addbtn:hover {
+    background-position: 100%;
+    color: #d23353;
+    width: 100px;
+    border-radius: 50px;
+    border: 3px solid #d23353;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.addbtn:hover span {
+    opacity: 1;
+}
+
+.addbtn:hover p {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .popup {
+        width: 400px;
+    }
+    .popup .addbtns {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px;
+    }
+    .popup .addbtns .btns {
+        display: flex;
+        gap: 10px; 
+    }
+    .popup .addbtns .error-msg {
+        display: none;  
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    nav .webname {
+        font-size: 32px;
+    }
+    .popup {
+        width: 300px;
+    }
+    .popup p {
+        font-size: 24px;
+    }
+    .popup .addinputs input, .addinputs .adddescription .descriptionarea {
+        font-size: 16px;
+    }
+    .popup .addbtns button {
+        width: 60px;
+        height: 32px;
+        font-size: 12px;
+    }
+    .popup .addbtns .error-msg {
+        font-size: 14px; 
+    }
+}

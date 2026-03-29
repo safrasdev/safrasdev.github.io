@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBeacon</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <section id="navbar">
+        <nav>
+            <p class="webname"><span>Book </span> Beacon</p>
+        </nav>
+    </section>
+    <section id="popup">
+        <div class="overlay"></div>
+        <div class="popup">
+            <p>Add Book</p>
+            <div class="addinputs">
+                <div class="addtitle">
+                    <input 
+                    type="text" 
+                    placeholder="Book Title" 
+                    class="titleinput"
+                    spellcheck="false"
+                    >
+                    <span class="focus-border"></span>
+                </div>
+                <div class="addauthor">
+                    <input type="text" 
+                    placeholder="Book Author" 
+                    class="authorinput"
+                    spellcheck="false"
+                    >
+                    <span class="focus-border"></span>
+                </div>
+                <div class="adddescription">
+                    <textarea 
+                    class="descriptionarea" 
+                    placeholder="Short Description..." 
+                    spellcheck="false"></textarea>
+                    <span class="focus-bg"></span>
+                </div>
+            </div>
+            <div class="addbtns">
+                <div class="btns">
+                    <button class="add">ADD</button>
+                    <button class="cancel">CANCEL</button>
+                </div>
+                <div class="error">
+                    <p class="error-msg">Please fill the following informations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="notes">
+        <div class="books">
+            <div class="container">
+                <h2 class="heading">Rich Dad Poor Dad</h2>
+                <p class="author">Robert</p>
+                <p class="content">"Rich Dad Poor Dad" by Robert Kiyosaki is a personal finance classic that contrasts two different 
+                    approaches to money and wealth. The book tells the story of Kiyosaki's "two dads"—his own father (Poor Dad), who 
+                    was highly educated but struggled financially, and his friend’s father (Rich Dad), a successful entrepreneur who 
+                    taught him the secrets of building wealth.</p>
+                <button class="delete" onclick ="deleteBook(event)">Delete</button>
+            </div>
+        </div>
+    </section>
+    <div class="addbtn">
+        <p>+</p>
+        <span>Add</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

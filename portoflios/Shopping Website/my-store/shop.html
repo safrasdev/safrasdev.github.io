@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | VOGUEMAN</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+<body>
+    <site-header></site-header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="container">
+                <h1 class="reveal-text"><span>THE</span> <span>COLLECTION</span></h1>
+                <p class="fade-in">Meticulously crafted for the discerning gentleman.</p>
+            </div>
+        </section>
+
+        <section class="shop-container">
+            <div class="container flex-shop">
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar fade-in">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#" class="active">All Collections</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Watches</a></li>
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="product-grid-wrap">
+                    <div class="product-grid" id="product-list">
+                        <!-- Product Item 1 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=1">
+                                    <img src="https://images.unsplash.com/photo-1616663308968-58162d332720" alt="Oxford Shoes">
+                                </a>
+                                <div class="product-badge">BESTSELLER</div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=1">Classic Oxford Leather</a></h3>
+                                <p class="product-cat">Shoes</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$249.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(1, 'Classic Oxford Leather', 249)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 2 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=2">
+                                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800" alt="Silver Watch">
+                                </a>
+                                <div class="product-badge offer-badge">20% OFF</div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=2">Silver Zenith Timepiece</a></h3>
+                                <p class="product-cat">Watches</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$899.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(2, 'Silver Zenith Timepiece', 899)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=3">
+                                    <img src="https://i.pinimg.com/736x/3c/7f/ca/3c7fca9a5265752950554214a967a0d6.jpg" alt="Trench">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=3">Minimalist Trench</a></h3>
+                                <p class="product-cat">Clothing</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$320.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(3, 'Minimalist Trench', 320)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=4">
+                                    <img src="https://www.urbanrider.co.uk/media/catalog/product/cache/059381bd7ffb1f896f935f29bf8190e8/f/s/fso014_6370mf_300rgb08_1.jpg" alt="Leather Jacket">
+                                </a>
+                                <div class="product-badge new-badge">NEW ARRIVAL</div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=4">Urban Stealth Jacket</a></h3>
+                                <p class="product-cat">Clothing</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$550.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(4, 'Urban Stealth Jacket', 550)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=5">
+                                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083" alt="Sunglasses">
+                                </a>
+                                <div class="product-badge limited-badge">LIMITED</div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=5">Navigator Sunglasses</a></h3>
+                                <p class="product-cat">Accessories</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$180.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(5, 'Navigator Sunglasses', 180)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="product-card reveal-item">
+                            <div class="product-img">
+                                <a href="product.html?id=6">
+                                    <img src="https://www.giorgiomilano.com/cdn/shop/files/234RG023_550x550.jpg?v=1773178022" alt="Watch">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <h3><a href="product.html?id=6">Nero Chronograph</a></h3>
+                                <p class="product-cat">Watches</p>
+                                <div class="price-cta">
+                                    <p class="product-price">$1,200.00</p>
+                                    <button class="add-to-cart-cta" onclick="addToCart(6, 'Nero Chronograph', 1200)">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="load-more-wrap fade-in">
+                        <button class="btn btn-load-more">LOAD MORE COLLECTIONS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gsap-animations.js"></script>
+</body>
+</html>
