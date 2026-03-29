@@ -16,16 +16,16 @@ export default function Portfolio() {
     {
       title: "Book Beacon",
       category: "Create Books",
-      image: "portoflios/thumbnails/bookbeacon.png",
+      image: "/public/portfolios/thumbnails/bookbeacon.png",
       color: "text-primary",
-      link: "portoflios/BookBeacon/main.html"
+      link: "/public/portfolios/BookBeacon/main.html"
     },
     {
       title: "JavaScript Engine",
       category: "Animation",
       image: "portoflios/thumbnails/jsengine.png",
       color: "text-tertiary",
-      link: "portoflios/JavaScript Execution Visualizer/index.html" 
+      link: "/public/portfolios/JavaScript Execution Visualizer/index.html" 
     },
     {
       title: "Korrel",
@@ -39,35 +39,35 @@ export default function Portfolio() {
       category: "Personal Portfolio",
       image: "portoflios/thumbnails/obsidiangallery.png",
       color: "text-tertiary",
-      link: "portoflios/Obsidian Gallery/index.html" 
+      link: "/public/portfolios/Obsidian Gallery/index.html" 
     },
     {
       title: "Art of Flavour",
       category: "Restuarant Website",
       image: "portoflios/thumbnails/resturant.png",
       color: "text-tertiary",
-      link: "portoflios/Cafe Website/index.html" 
+      link: "/public/portfolios/Cafe Website/index.html" 
     },
     {
       title: "Vogue Man",
       category: "E-Commerce",
       image: "portoflios/thumbnails/vogueman.png",
       color: "text-tertiary",
-      link: "portoflios/Shopping Website/my-store/index.html" 
+      link: "/public/portfolios/Shopping Website/my-store/index.html" 
     },
     {
       title: "Web Iphone",
       category: "Web Design",
       image: "portoflios/thumbnails/iphone.png",
       color: "text-primary",
-      link: "portoflios/IPhone Project/sources/index.html" 
+      link: "/public/portfolios/IPhone Project/sources/index.html" 
     },
     {
       title: "Lonely Snake",
       category: "Game",
       image: "portoflios/thumbnails/lonelysnake.png",
       color: "text-tertiary",
-      link: "portoflios/Lonely Snake/sources/index.html" 
+      link: "/public/portfolios/Lonely Snake/sources/index.html" 
     },
   ];
 
